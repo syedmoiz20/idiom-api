@@ -7,7 +7,7 @@ def matchWord(word1,word2):
     return normalize(word1) == normalize(word2)
 
 def searchWikt(word):
-    with open("wikiData/kaikki.org-dictionary-Arabic.json", encoding="utf-8") as f:
+    with open("wikiData/arabic-dict.json", encoding="utf-8") as f:
         for line in f:
             data = json.loads(line)
             if matchWord(data['word'], word):
